@@ -14,8 +14,8 @@ Get the package:
 
     $ go get github.com/chris124567/spotrip
 
-After installaing the dependencies, run:
-    
+There will be a warning about some undefined functions.  It can safely be ignored.  This is because we have a local version of librespot, which adds additional functionality.  This project uses the "replace" directive in go.mod to avoid having to replace all the import paths, but [the Go developers](https://github.com/golang/go/issues/30354) do not want to make ```go get``` support the replace directive.  Just make sure to run the next step to be able to use the program.
+
     $ cd $GOPATH/src/github.com/chris124567/spotrip
     $ scripts/build.sh
 
@@ -87,7 +87,7 @@ The ID follows the last slash of the URL, for instance, in:
 This application currently has several limitations that will be addressed in future versions, notably:
 
     * Only 160 KBPS OGG downloads are supported (even though Spotify offers 320 KBPS to Premium members and also gives 96 KBPS to free members as a low bandwith option).  This will be a configurable option in the future with priority system for qualities (in case one is not available).
-    * No way to customize output file names based on metadata
+    * There is no way to customize output file names
     * There is no playlist downloading support
     * There is no podcast/show support
 
