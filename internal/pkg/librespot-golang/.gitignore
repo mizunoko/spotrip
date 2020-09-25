@@ -1,0 +1,9 @@
+librespot-golang
+**.DS_Store
+vendor/
+.idea/
+pkg/
+blob.bin
+*.aar
+*.jar
+bin/
