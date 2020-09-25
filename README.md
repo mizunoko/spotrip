@@ -9,6 +9,13 @@ At least Go 1.11 to allow for module support.
 
 For adding metadata to the downloaded files, the ```taglib``` developer libraries are required.  Learn how to install them [here](https://github.com/wtolson/go-taglib#dependencies).
 
+## Build
+After installing the dependencies, run:
+
+    $ scripts/build.sh
+
+You should now see an executable file called ```spotrip```.  This is the program.
+
 ## Usage
 A typical session would look something like (replacing credentials obviously):
 
@@ -75,6 +82,7 @@ The ID follows the last slash of the URL, for instance, in:
 This application currently has several limitations that will be addressed in future versions, notably:
 
     * Only 160 KBPS OGG downloads are supported (even though Spotify offers 320 KBPS to Premium members and also gives 96 KBPS to free members as a low bandwith option).  This will be a configurable option in the future with priority system for qualities (in case one is not available).
+    * No way to customize output file names based on metadata
     * There is no playlist downloading support
     * There is no podcast/show support
 

@@ -1,3 +1,5 @@
 #!/bin/sh
 set -eux
-rm main
+MAIN_OUTPUT_FILE="spotrip"
+
+rm "${MAIN_OUTPUT_FILE}"
