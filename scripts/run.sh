@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eux
-MAIN_FILE="cmd/spotrip/main.go"
+MAIN_FILE="main.go"
 MAIN_OUTPUT_FILE="main"
 
 # reset
