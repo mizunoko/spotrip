@@ -10,7 +10,11 @@ At least Go 1.11 to allow for module support.
 For adding metadata to the downloaded files, the ```taglib``` developer libraries are required.  Learn how to install them [here](https://github.com/wtolson/go-taglib#dependencies).
 
 ## Build
-After installing the dependencies, run:
+Get the package:
+
+    $ go get github.com/chris124567/spotrip
+
+After installaing the dependencies, run:
 
     $ scripts/build.sh
 
