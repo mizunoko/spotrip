@@ -42,7 +42,7 @@ func main() {
 		log.Fatal("Please specify a username and password")
 	}
 
-	session, err = librespot.Login(*username, *password, "christopher")
+	session, err = librespot.Login(*username, *password, "librespot")
 	if err != nil {
 		log.Fatalf("Failed to login: %+v", err)
 	}
