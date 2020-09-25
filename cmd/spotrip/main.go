@@ -29,10 +29,10 @@ func main() {
 	var session *core.Session
 	var err error
 
-	username := flag.String("username", EMPTY_STIRNG, "Username of the spotify account.")
-	password := flag.String("password", EMPTY_STIRNG, "Password of the spotify account.")
+	username := flag.String("username", EMPTY_STIRNG, "Username of the spotify account. Required.")
+	password := flag.String("password", EMPTY_STIRNG, "Password of the spotify account. Required.")
 	searchQuery := flag.String("search", EMPTY_STIRNG, "Search query.")
-	artists := flag.String("artists", EMPTY_STIRNG, "List of artist IDs to download (albums, singles, and compilations), separated by commas.")
+	artists := flag.String("artists", EMPTY_STIRNG, "List of artist IDs to download (downloads all of their albums, singles, and compilations), separated by commas.")
 	albums := flag.String("albums", EMPTY_STIRNG, "List of album IDs to download, separated by commas.")
 	tracks := flag.String("tracks", EMPTY_STIRNG, "List of track IDs to download, separated by commas.")
 	artistInfo := flag.String("artist_info", EMPTY_STIRNG, "Specify an artist ID in this field to get JSON formatted information about that artist.")

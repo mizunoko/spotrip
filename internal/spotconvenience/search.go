@@ -2,9 +2,9 @@ package spotconvenience
 
 import (
 	"fmt"
-	"strings"
 	"github.com/librespot-org/librespot-golang/librespot/core"
 	"github.com/librespot-org/librespot-golang/librespot/metadata"
+	"strings"
 )
 
 func removeSpotifyUriPrefix(uri string) string {
@@ -30,7 +30,7 @@ func Search(session *core.Session, query string) (*metadata.SearchResult, error)
 	for _, result := range results.Albums.Hits {
 		artistList := []string{}
 		for _, artist := range result.Artists {
-			artistList = append(artistList , artist.Name) 
+			artistList = append(artistList, artist.Name)
 		}
 
 		fmt.Printf("Album: %s - %s (%s)\n", strings.Join(artistList, ", "), result.Name, removeSpotifyUriPrefix(result.Uri))
@@ -39,7 +39,7 @@ func Search(session *core.Session, query string) (*metadata.SearchResult, error)
 	for _, result := range results.Tracks.Hits {
 		artistList := []string{}
 		for _, artist := range result.Artists {
-			artistList = append(artistList , artist.Name) 
+			artistList = append(artistList, artist.Name)
 		}
 
 		fmt.Printf("Track: %s - %s (%s)\n", strings.Join(artistList, ", "), result.Name, removeSpotifyUriPrefix(result.Uri))
