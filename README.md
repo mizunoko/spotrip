@@ -15,7 +15,8 @@ Get the package:
     $ go get github.com/chris124567/spotrip
 
 After installaing the dependencies, run:
-
+    
+    $ cd $GOPATH/src/github.com/chris124567/spotrip
     $ scripts/build.sh
 
 You should now see an executable file called ```spotrip```.  This is the program.
