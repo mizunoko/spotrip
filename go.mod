@@ -1,4 +1,4 @@
-module github.com/chris124567/spotrip
+module github.com/MikeeI/spotrip
 
 go 1.14
 
