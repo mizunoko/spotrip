@@ -4,22 +4,35 @@ This is an open source Spotify song ripping application written in Golang (using
 ## Note
 Use of this tool may result in your account getting banned by Spotify.  **Please** do not use it on accounts you have spent any money on.  I am not liable for how you use this tool in any way.  From my experience using this tool, I have observed that Spotify has rate limiting measures and must have some idea of what is going on. 
 
-## Dependencies
-At least Go 1.11 to allow for module support.
-
-For adding metadata to the downloaded files, the ```taglib``` developer libraries are required.  Learn how to install them [here](https://github.com/wtolson/go-taglib#dependencies).
-
 ## Build
-Get the package:
 
-    $ go get github.com/chris124567/spotrip
+for Ubuntu: (Requirements: Go 1.18)
 
-There will be a warning about some undefined functions.  It can safely be ignored.  This is because we have a local version of librespot, which adds additional functionality.  This project uses the "replace" directive in go.mod to avoid having to replace all the import paths, but [the Go developers](https://github.com/golang/go/issues/30354) do not want to make ```go get``` support the replace directive.  Just make sure to run the next step to be able to use the program.
+```bash
+$ sudo apt install -y libtagc0-dev
+$ git clone https://github.com/mizunoko/spotrip.git
+$ cd spotrip
+$ go get
+$ ./scripts/build.sh
+$ sudo cp -a ./spotrip /usr/local/bin
 
-    $ cd $GOPATH/src/github.com/chris124567/spotrip
-    $ scripts/build.sh
-
-You should now see an executable file called ```spotrip```.  This is the program.
+$ spotrip --help
+Usage of spotrip:
+  -albums string
+        List of album IDs to download, separated by commas.
+  -artist_info string
+        Specify an artist ID in this field to get JSON formatted information about that artist.
+  -artists string
+        List of artist IDs to download (downloads all of their albums, singles, and compilations), separated by commas.
+  -password string
+        Password of the spotify account. Required.
+  -search string
+        Search query.
+  -tracks string
+        List of track IDs to download, separated by commas.
+  -username string
+        Username of the spotify account. Required.
+```
 
 ## Usage
 A typical session would look something like (replacing credentials obviously):
